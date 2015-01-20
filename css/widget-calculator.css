@@ -1,0 +1,33 @@
+/* Style: Calculator Widget */
+
+.widget-calculator {
+   border-radius: 0.5rem;
+   background-color: gainsboro;
+   transition: background-color 1s;
+   transition: color 1s;
+   padding: 1rem;
+   }
+.widget-calculator .calculator-header {
+   font-size: 1.3rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+   }
+.widget-calculator .calculator-theme {
+   float: right;
+   }
+.widget-calculator .calculator-value input {
+   text-align: right;
+   }
+.widget-calculator .calculator-buttons {
+   margin-bottom: 15px;
+   }
+.widget-calculator .calculator-buttons button {
+   margin-right: 5px;
+   }
+.widget-calculator .calculator-accumulator {
+   font-weight: bold;
+   }
+.widget-calculator.alt-theme {
+   color: white;
+   background-color: dimgray;
+   }

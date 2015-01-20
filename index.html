@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- - - - - - - - - -->
+<!--  Dashboard II   -->
+<!-- - - - - - - - - -->
+<html>
+<head>
+<meta charset=utf-8>
+<title>Dashboard II</title>
+<link rel=stylesheet href="http://www.centerkey.com/css/reset.css">
+<link rel=stylesheet href="css/style.css">
+<link rel=stylesheet href="css/widget-calculator.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular-sanitize.js"></script>
+<script src="js/controllers.js"></script>
+</head>
+<body ng-app=calculatorApp>
+
+<article>
+   <h1>Dashboard II</h1>
+   <div id=widgets>
+
+      <!-- Calculator Widget -->
+      <div class=widget-calculator ng-controller=CalculatorCtrl ng-class="{ 'alt-theme': altTheme }">
+         <button class=calculator-theme ng-click="altTheme = !altTheme">Change Theme</button>
+         <div class=calculator-header>Calculator</div>
+         <div class=calculator-value>
+            <input type=value step=any ng-model=value>
+         </div>
+         <div class=calculator-buttons>
+            <button ng-repeat="button in buttons" ng-bind-html=button.display
+               ng-click="compute(button.name, accumulator, value)"></button>
+         </div>
+         <div>Total: <span class=calculator-accumulator>{{accumulator}}</span></div>
+      </div>
+
+   </div>
+</article>
+
+</body>
+</html>
