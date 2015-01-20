@@ -11,7 +11,7 @@ function calculatorCtrl($scope) {
       clear:    function(accumulator, value) { return 0; }
       };
    function doMath(operator, accumulator, value) {
-      $scope.accumulator = math[operator](parseFloat(accumulator), parseFloat(value));
+      $scope.accumulator = math[operator](accumulator, value);
       console.log('Calculator:', operator, accumulator, value, '-->', $scope.accumulator);
       }
    $scope.altTheme = false;

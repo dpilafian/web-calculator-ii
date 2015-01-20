@@ -24,7 +24,7 @@
          <button class=calculator-theme ng-click="altTheme = !altTheme">Change Theme</button>
          <div class=calculator-header>Calculator</div>
          <div class=calculator-value>
-            <input type=value step=any ng-model=value>
+            <input type=number step=any ng-model=value>
          </div>
          <div class=calculator-buttons>
             <button ng-repeat="button in buttons" ng-bind-html=button.display
